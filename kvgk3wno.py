@@ -1,7 +1,10 @@
 """checks whether the song has changed in the blog and notifies"""
 import urllib
 from BeautifulSoup import BeautifulSoup as bs
-kvgk=urllib.urlopen("http://punehues.blogspot.com").read()
+
+#scans my blog http://punehues.blogspot.com
+
+kvgk=urllib.urlopen("http://punehues.blogspot.com").read()    
 soup=bs(kvgk)
 finding=soup.find('h1',id="song")
 songname=finding
@@ -82,7 +85,7 @@ else:
                     
                     sys.exit(0)
                 confget=config.get
-                senders_numbers=['9021716142','8446588873','8928118491','9011059894','7709983325','9422314960','7875053682','9595155213','9543910639','9422928202','9422025243'] #contains the numbers of all senders
+                senders_numbers=['enter phone numbers here'] #contains the numbers of all senders
                 ###
                 ### Fetch the message either from stdin or --message        
                 soup=bs(kvgk)	
